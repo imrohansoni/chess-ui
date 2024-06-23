@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.square {
+  width: 80px;
+  height: 80px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.square:hover .chess-piece {
+  transform: scale(1.2);
+}
+
+.square.black {
+  background-color: #ffffff;
+}
+
+.square.white {
+  background-color: #B7C0D8;
+}
+
+.square-number {
+  height: 30px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #9dacd6;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.chess-squares {
+  display: grid;
+  grid-template-columns: repeat(8, 80px);
+  grid-template-rows: repeat(8, 80px);
+  gap: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chess-piece {
+  height: 50px;
+  transition: all 0.4s;
+}
+
+.cols {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: #9dacd6;
+}
+
+.board-container {
+  display: flex;
+  justify-content: center;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.rows .square-number {
+  width: 30px;
+  height: 80px;
 }
